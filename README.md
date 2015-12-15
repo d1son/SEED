@@ -1,4 +1,4 @@
-# Name of Front End Project
+# SEED
 
 ##General Project Summary
 
