@@ -1,4 +1,4 @@
-# SEED
+# SEED (Student Employee Employer Database)
 
 ##General Project Summary
 
