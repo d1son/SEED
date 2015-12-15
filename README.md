@@ -6,6 +6,12 @@ Our project will use multiple APIs (listed below) in order to provide employees 
 
 ##Technology
 
+- Bootstrap
+- HTML
+- CSS
+- Javascript
+- JQuery
+
 ##Deployed Link
 
 ##API's Used
