@@ -8,6 +8,9 @@ Our project will use multiple APIs (listed below) in order to provide empolyees 
 ##Deployed Link
 
 ##API's Used
+Linkedin API - https://developer.linkedin.com/docs
+Github API - https://developer.github.com/v3/#authentication
+Firebase API - https://www.firebase.com/docs/web/api/
 
 ##Trello Link
 https://trello.com/studentemployersearch
