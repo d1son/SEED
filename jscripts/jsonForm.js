@@ -1,6 +1,12 @@
 $(document).ready(function(){
-  var studentList
-  $('#submit').on('click', function(e){
+  var studentList = []
+  var fbase = new Firebase('https://incandescent-heat-4625.firebaseio.com/');
+
+  fbase.on("child_added", function(snapshot){
+    studentList[studentList.length] = snapshot.val()
+  });
+
+  $('#submitForm').on('click', function(e){
     e.preventDefault()
     var name = $('#name').val()
     var email = $('#email').val()
@@ -19,7 +25,7 @@ $(document).ready(function(){
       "portfolio": portfolio,
       "facebook": facebook,
       "twitter": twitter   
-      }
-    console.log(student)
+    }
+    fbase.push(student)
   });
 });
