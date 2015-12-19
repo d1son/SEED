@@ -26,5 +26,8 @@ input[type=checkbox]
 }
 #expertiseLabel{
   text-align: center;
->>>>>>> 80562ab77dba9656085fb5a80fd10dc4936c6c37
+}
+
+ul {
+  list-style: none;
 }
