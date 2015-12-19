@@ -1,3 +1,30 @@
-ul {
-  list-style: none
+
+
+#student-employee {
+  margin-left:300px;
+  margin-right:10px;
+}
+.checkboxs {
+  font-size: 110%;
+  display: inline;
+  list-style-type: none;
+}
+input[type=checkbox]
+{
+  width: 20px;
+  margin:0;
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(1); /* IE */
+  -moz-transform: scale(1); /* FF */
+  -webkit-transform: scale(1); /* Safari and Chrome */
+  -o-transform: scale(1); /* Opera */
+}
+.checkbox-grid li {
+    display: inline-block;
+    float: left;
+    width: 25%;
+}
+#expertiseLabel{
+  text-align: center;
+>>>>>>> 80562ab77dba9656085fb5a80fd10dc4936c6c37
 }
