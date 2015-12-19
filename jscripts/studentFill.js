@@ -20,7 +20,6 @@ $(document).ready(function(){
         .append($('<div>').html('<br>'))
         $('#studentListTest').append(newStudent)
       }
-
   });
 //New Student 
   $('#submitForm').on('click', function(e){
