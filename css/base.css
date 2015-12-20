@@ -30,3 +30,7 @@ input[type=checkbox]
 ul {
   list-style: none;
 }
+
+#expertiseFilterLabel {
+  text-align: center;
+}
