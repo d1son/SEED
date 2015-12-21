@@ -16,8 +16,8 @@
       </div>
       <div>
         <ul class="nav navbar-nav navbar-right">
-          <li class="active" id="student-employee"><a href="#">Student/Employee</a><li>   
-          <li><a href="#">Employeer</a></li>
+          <li class="active" id="student-employee"><a href="#studentSection">Student/Employee</a><li>   
+          <li><a href="#">Employer</a></li>
           <li><a href="#">Contact</a><li>
          </ul> 
       </div>
@@ -150,6 +150,126 @@
       </ul> 
     </div>
   </div><!--end of footer-->
+
+  <div id="studentSection"><!--beginning of the student/employee section-->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">SEED</a>
+        </div>
+        
+        <form class="navbar-form navbar-left" role="search" id="formStudentSearch">
+          <div class="form-group">
+            <label>Search</label>
+            <input type="text" class="form-control" placeholder="Search for students">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+
+        <div>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#student-employee">Home</a><li>   
+            <li><a href="#">Employer</a></li>
+            <li><a href="#">Contact</a><li>
+           </ul> 
+        </div>
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="form-group">
+      <label class="control-label col-md-12" id='expertiseFilterLabel' for="expertiseFilter">Filter by Expertise:</label>
+      <div class='row'>
+        <div class="col-md-12">
+          <ul class='checkbox-grid'>
+            <li><input type="checkbox" class="expertiseCheckboxs" id='javascriptFilter'>JavaScript</li>
+            <li><input type="checkbox" class="expertiseCheckboxs" id='jqueryFilter'>jquery</li>
+            <li><input type="checkbox" class="expertiseCheckboxs" id='nodeFilter'>Node.js</li>
+            <li><input type="checkbox" class="expertiseCheckboxs" id='expressFilter'>Express</li>
+            <li><input type="checkbox" class="expertiseCheckboxs" id='html5Filter'>HTML5/CSS3</li>    
+            <li><input type="checkbox" class="expertiseCheckboxs" id='bootstrapFilter'>Bootstrap</li>
+            <li><input type="checkbox" class="expertiseCheckboxs" id='gitFilter'>Git</li>
+            <li><input type="checkbox" class="expertiseCheckboxs" id='angularFilter'>Angular.js</li>  
+            <li><input type="checkbox" class="expertiseCheckboxs" id='lodashFilter'>Lodash</li>
+            <li><input type="checkbox" class="expertiseCheckboxs" id='jsonFilter'>API/JSON</li>
+            <li><input type="checkbox" class="expertiseCheckboxs" id='restfulFilter'>RESful API</li>
+            <li><input type="checkbox" class="expertiseCheckboxs" id='firebaseFilter'>Firebase</li>
+            <li><input type="checkbox" class="expertiseCheckboxs" id='mysqlFilter'>MySQL</li>
+            <li><input type="checkbox" class="expertiseCheckboxs" id='ajaxFilter'>Ajax</li>
+            <li><input type="checkbox" class="expertiseCheckboxs" id='trelloFilter'>Trello</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h4 id="studentsSectionHeader">Students</h4>
+    </div>
+    <div class="row"><!--beginning of first students row-->
+      <div class="col-md-1">
+        <img src="images/StevenBuller_cropped.jpg" class="studentImages">
+      </div>
+      <div class="col-md-3">  
+        <ul>
+          <li><h5>Steven Buller</h5></li>
+          <li>HTML5</li>
+        </ul>
+          <button type="button" class="btn-sm btn-info" id="moreStudentInfo">More Info</button>
+      </div>
+      <div class="col-md-1">
+        <img src="images/DongSon.jpg" class="studentImages">
+      </div>
+      <div class="col-md-3">  
+        <ul>
+          <li><h5>Dong Son</h5></li>
+          <li>CSS</li>
+        </ul>
+        <button type="button" class="btn-sm btn-info" id="moreStudentInfo">More Info</button>
+      </div>
+      <div class="col-md-1">
+        <img src="images/DongHoonKim.jpg" class="studentImages">
+      </div>
+      <div class="col-md-3">  
+        <ul>
+          <li><h5>Dong Hoon Kim</h5></li>
+          <li>Bootstrap</li>
+        </ul>
+        <button type="button" class="btn-sm btn-info" id="moreStudentInfo">More Info</button>
+      </div>
+    </div><!--end of first students row-->
+
+    <div class="row"><!--beginning of second students row-->
+      <div class="col-md-1">
+        <img src="images/StevenBuller_cropped.jpg" class="studentImages">
+      </div>
+      <div class="col-md-3">  
+        <ul>
+          <li><h5>Steven Buller</h5></li>
+          <li>HTML5</li>
+        </ul>
+          <button type="button" class="btn-sm btn-info" id="moreStudentInfo">More Info</button>
+      </div>
+      <div class="col-md-1">
+        <img src="images/DongSon.jpg" class="studentImages">
+      </div>
+      <div class="col-md-3">  
+        <ul>
+          <li><h5>Dong Son</h5></li>
+          <li>CSS</li>
+        </ul>
+        <button type="button" class="btn-sm btn-info" id="moreStudentInfo">More Info</button>
+      </div>
+      <div class="col-md-1">
+        <img src="images/DongHoonKim.jpg" class="studentImages">
+      </div>
+      <div class="col-md-3">  
+        <ul>
+          <li><h5>Dong Hoon Kim</h5></li>
+          <li>Bootstrap</li>
+        </ul>
+        <button type="button" class="btn-sm btn-info" id="moreStudentInfo">More Info</button>
+      </div>
+    </div><!--end of second students row-->
+
+  </div><!--end of student/employee section-->
 
   <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>

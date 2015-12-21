@@ -1,8 +1,7 @@
 
 
-#student-employee {
+#formStudentSearch {
   margin-left:300px;
-  margin-right:10px;
 }
 .checkboxs {
   font-size: 110%;
@@ -30,4 +29,22 @@ input[type=checkbox]
 
 ul {
   list-style: none;
+}
+
+#expertiseFilterLabel {
+  text-align: center;
+}
+
+.studentImages {
+  margin: 25px;
+  height: 75px;
+  width: 75px;
+}
+
+#studentsSectionHeader {
+  text-align: center;
+}
+
+#moreStudentInfo {
+  margin-left: 40px;
 }
