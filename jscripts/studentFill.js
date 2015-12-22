@@ -1,26 +1,44 @@
 $(document).ready(function(){
   var fbase = new Firebase('https://incandescent-heat-4625.firebaseio.com/');
   var studentList = []
+  var newStudent
+  var githubPicture
 //Populate studentList
   fbase.on("child_added", function(snapshot){
     studentList[studentList.length] = snapshot.val()
   });
 //Dynamically Create students
   $('#studentFill').on('click',function(){
+    var githubUsername = ""
+    var studentInfo
+    arrayIndex = 0
       for(i = 0; i < studentList.length; i++){
-        var newStudent = $('<div>')
-        .append($('<p>').html('Name: ' + studentList[i].name))
-        .append($('<p>').html('Email: ' + studentList[i].email))
-        .append($('<a>').html('github ').attr('href', studentList[i].github))
-        .append($('<a>').html('linkedin ').attr('href', studentList[i].linkedin))
-        .append($('<a>').html('stackoverflow ').attr('href', studentList[i].stackoverflow))
-        .append($('<a>').html('portfolio ').attr('href', studentList[i].portfolio))
-        .append($('<a>').html('facebook ').attr('href', studentList[i].facebook))
-        .append($('<a>').html('twitter ').attr('href', studentList[i].twitter))
-        .append($('<div>').html('<br>'))
-        $('#studentListTest').append(newStudent)
+        githubUsername = studentList[i].github
+        githubUsername = githubUsername.slice((githubUsername.lastIndexOf('/') + 1),githubUsername.length)
+        getGithubPicture(githubUsername,studentList[i])
       }
   });
+  function getGithubPicture(url, info){
+    $.ajax({
+      type: 'GET',
+      url: "https://api.github.com/users/" + url,
+      success: function (user){
+        githubPicture = user.avatar_url
+      }
+
+      }).done(function(){
+        createStudentDisplay(githubPicture, info)
+    })
+  }
+
+  function createStudentDisplay(picture, studentInfo){
+    newStudent = $('<div>').addClass('col-md-4')
+      .append($("<img>").attr('src', picture).addClass('studentPicture'))
+      .append($("<p>").html(studentInfo.name))
+      .append($("<p>").html(studentInfo.email))
+      .append($("<button>").html('More Info').attr('type','button').addClass("btn-sm btn-info moreStudentInfo"))
+      $('#studentList').append(newStudent)
+}
 //New Student 
   $('#submitForm').on('click', function(e){
     e.preventDefault()
@@ -38,8 +56,6 @@ $(document).ready(function(){
         expertiseArray.push($(this).attr('id'))
       }
     });
-
-
 
     var student = {
       "name": name,
