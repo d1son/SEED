@@ -1,12 +1,15 @@
 $(document).ready(function(){
   var fbase = new Firebase('https://incandescent-heat-4625.firebaseio.com/');
-  var studentList = []
+  window.studentList = []
   var newStudent
   var githubPicture
 //Populate studentList
   fbase.on("child_added", function(snapshot){
     studentList[studentList.length] = snapshot.val()
   });
+//Hide Div
+  $('#studentMoreInfo').hide()
+
 //Dynamically Create students
   $('#studentFill').on('click',function(){
     var githubUsername = ""
@@ -30,15 +33,33 @@ $(document).ready(function(){
         createStudentDisplay(githubPicture, info)
     })
   }
-
+  
   function createStudentDisplay(picture, studentInfo){
+    $('.moreStudentInfo').off()
     newStudent = $('<div>').addClass('col-md-4')
       .append($("<img>").attr('src', picture).addClass('studentPicture'))
       .append($("<p>").html(studentInfo.name))
       .append($("<p>").html(studentInfo.email))
-      .append($("<button>").html('More Info').attr('type','button').addClass("btn-sm btn-info moreStudentInfo"))
-      $('#studentList').append(newStudent)
+      .append($("<button>").html('More Info').attr('type','button').addClass("btn-sm btn-info moreStudentInfo").attr('data-name', studentInfo.name))
+    $('#studentList').append(newStudent)
+    $('.moreStudentInfo').on('click', moreInfoButton)
+  }
+
+  function moreInfoButton() {
+    var student = $(this).attr('data-name')
+    $('#studentList').hide()
+    $('#studentMoreInfo').show()
+    for(i = 0; i < studentList.length; i++){
+      if(student === studentList[i].name){
+        student = studentList[i]
+      }
+    }
+    $('#githubButton').attr('data-giturl', student.github)
+
+
+
 }
+
 //New Student 
   $('#submitForm').on('click', function(e){
     e.preventDefault()
