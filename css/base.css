@@ -48,3 +48,7 @@ ul {
 #moreStudentInfo {
   margin-left: 40px;
 }
+.studentPicture{
+  height: 90px;
+  width: 90px;
+}
