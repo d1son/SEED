@@ -207,13 +207,55 @@
       <div class='row' id='studentList'>
 
       </div>
+      <div class='row' id='studentMoreInfo'>
+        <div>
+        github
+        <button id='githubButton'>Github Repos</button>
+        </div>
+      </div>
     </div>
   </div><!--end of student/employee section-->
 
+<!--github Modal-->
+  <div id='githubRepoModal' class="modal fade" tabindex="1" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">GitHub</h4>
+        </div>
+        <div class="modal-body">
+          <div class=='container'>
+            <h3>GitHub Reposotories</h3>
+            <div class='row'>
+              <div class='col-md-4 list-group'>
+                
+              </div>
+              <div class='col-md-8'>
+                <table class='table'>
+                  <thead>
+                    <th>Name</th>
+                    <th>Date</th>
+                    <th>Message</th>
+                  </thead>
+                  <tbody id='tableBody'>
+                    
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
   <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script type="text/javascript" src='jscripts/studentFill.js'></script>
+  <script type="text/javascript" src='jscripts/githubAPI.js'></script>
 
 </body>
 </html>
