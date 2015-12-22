@@ -46,6 +46,10 @@ ul {
   width: 100px;
 }
 
+#studentMoreInfoList {
+  margin-left: -45px;
+}
+
 #studentsSectionHeader {
   text-align: center;
 }
