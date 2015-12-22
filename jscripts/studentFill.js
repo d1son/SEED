@@ -3,7 +3,6 @@ $(document).ready(function(){
   var studentList = []
   var newStudent
   var githubPicture
-  var arrayIndex
 //Populate studentList
   fbase.on("child_added", function(snapshot){
     studentList[studentList.length] = snapshot.val()
@@ -33,7 +32,6 @@ $(document).ready(function(){
   }
 
   function createStudentDisplay(picture, studentInfo){
-console.log(studentInfo)
     newStudent = $('<div>').addClass('col-md-4')
       .append($("<img>").attr('src', picture).addClass('studentPicture'))
       .append($("<p>").html(studentInfo.name))
@@ -58,8 +56,6 @@ console.log(studentInfo)
         expertiseArray.push($(this).attr('id'))
       }
     });
-
-
 
     var student = {
       "name": name,
@@ -147,38 +143,3 @@ console.log(studentInfo)
     $('#studentFormModal').modal('show')
   });
 });
-
-
-
-
-
-        // <div class="col-md-1">
-        //   <img src="images/StevenBuller_cropped.jpg" class="studentImages">
-        // </div>
-        // <div class="col-md-3">  
-        //   <ul>
-        //     <li><h5>Steven Buller</h5></li>
-        //     <li>HTML5</li>
-        //   </ul>
-        //     <button type="button" class="btn-sm btn-info" id="moreStudentInfo">More Info</button>
-        // </div>
-        // <div class="col-md-1">
-        //   <img src="images/DongSon.jpg" class="studentImages">
-        // </div>
-        // <div class="col-md-3">  
-        //   <ul>
-        //     <li><h5>Dong Son</h5></li>
-        //     <li>CSS</li>
-        //   </ul>
-        //   <button type="button" class="btn-sm btn-info" id="moreStudentInfo">More Info</button>
-        // </div>
-        // <div class="col-md-1">
-        //   <img src="images/DongHoonKim.jpg" class="studentImages">
-        // </div>
-        // <div class="col-md-3">  
-        //   <ul>
-        //     <li><h5>Dong Hoon Kim</h5></li>
-        //     <li>Bootstrap</li>
-        //   </ul>
-        //   <button type="button" class="btn-sm btn-info" id="moreStudentInfo">More Info</button>
-        // </div
