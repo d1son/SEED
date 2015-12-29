@@ -41,6 +41,15 @@ ul {
   width: 75px;
 }
 
+#studentMoreInfoImg {
+  height: 100px;
+  width: 100px;
+}
+
+#studentMoreInfoList {
+  margin-left: -45px;
+}
+
 #studentsSectionHeader {
   text-align: center;
 }
