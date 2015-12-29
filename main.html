@@ -16,9 +16,9 @@
       </div>
       <div>
         <ul class="nav navbar-nav navbar-right">
-          <li class="active" id="student-employee"><a href="#studentSection">Student/Employee</a><li>   
-          <li><a href="#">Employer</a></li>
-          <li><a href="#">Contact</a><li>
+          <li class="active" id="student-employee"><a href="">Student/Employee</a><li>   
+          <li id="employerNavBar"><a href="#">Employer</a></li>
+          <li id="contactNavBar"><a href="#">Contact</a><li>
          </ul> 
       </div>
     </div><!-- /.container-fluid -->
@@ -122,8 +122,8 @@
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
   </div><!-- /.modal -->
-
-  <div class="row"><!--footer-->
+<!--footer-->
+  <div class="row" id="footer">
     <div class="col-md-4">
      <ul>
         <li><h4>About Us</h4></li>   
@@ -150,34 +150,9 @@
       </ul> 
     </div>
   </div><!--end of footer-->
-
-  <div id="studentSection"><!--beginning of the student/employee section-->
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#">SEED</a>
-          <img src="images/test.jpg" id="seedImage">
-        </div>
-        
-        <form class="navbar-form navbar-left" role="search" id="formStudentSearch">
-          <div class="form-group">
-            <label>Search</label>
-            <input type="text" class="form-control" placeholder="Search for students">
-          </div>
-          <button type="submit" class="btn btn-default">Submit</button>
-        </form>
-
-        <div>
-          <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="#student-employee">Home</a><li>   
-            <li><a href="#">Employer</a></li>
-            <li><a href="#">Contact</a><li>
-           </ul> 
-        </div>
-      </div><!-- /.container-fluid -->
-    </nav>
-
-    <div class="form-group">
+<!--beginning of the student/employee section-->
+  <div>
+    <div class="form-group filter">
       <label class="control-label col-md-12" id='expertiseFilterLabel' for="expertiseFilter">Filter by Expertise:</label>
       <div class='row'>
         <div class="col-md-12">
@@ -201,79 +176,78 @@
         </div>
       </div>
     </div>
-    <div>
-      <h4 id="studentsSectionHeader">Students</h4>
-    </div>
-    <div class='container'>
-      <div class='row' id='studentList'>
 
+
+    <div class='container' id='studentPage'>
+      <div class='row' id='studentList'>
+        <div>
+          <h4 id="studentsSectionHeader">Students</h4>
+        </div>
       </div>
       <div class='row' id='studentMoreInfo'>
-        <div>
-        github
-        <button id='githubButton'>Github Repos</button>
-        </div>
+      <!--beginning of student more info section-->
+        <div id="studentMoreInfoSection">
+          <div class="row"><!--first row-->
+            <div class="col-md-2"></div>
+            <div class="col-md-2">
+              <img src="" id="studentMoreInfoImg">
+            </div>
+
+            <div class="col-md-8">
+              <ul id="studentMoreInfoList">
+                <li id="studentMoreInfoName"><h4></h4></li>
+                <li id="studentMoreInfoSpecialty"></li>
+                <li id="studentMoreInfoPortfolio"><a href="" id="studentMoreInfoPortfolioLink">Portfolio</a></li>
+              </ul> 
+            </div>
+          </div><!--end of first row-->
+          <div></br></div>
+
+          <div class="row"><!--second row-->
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-2">
+              <a href="" id="studentMoreInfoLinkedin">Linkedin</a>
+            </div>
+            <div class="col-md-2">  
+              <a href="" id="studentMoreInfoFacebook">Facebook</a>
+            </div>
+            <div class="col-md-2">
+              <a href="" id="studentMoreInfoTwitter">Twitter</a>
+            </div>
+            <div class="col-md-2"></div>
+          </div><!--end of second row-->
+
+          <div class="row"><!--third row-->
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-2">
+              <button id='githubButton'></button>
+            </div>
+            <div class="col-md-2">  
+              <a href="" id="studentMoreInfoStackOverflow">Stack Overflow</a>
+            </div>
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-2"></div>
+          </div><!--end of third row-->
+
+          <div></br></div>
+
+          <div class="row"><!--fourth row-->
+            <div class="col-md-8">
+            </div>
+            <div class="col-md-2">
+              <button class="btn btn-sm btn-info" id="studentMoreInfoContactMe">Contact me</button>
+            </div>
+            <div class="col-md-2"></div>
+          </div><!--end of fourth row-->
+        </div><!--end of student more info section-->    
       </div>
     </div>
   </div><!--end of student/employee section-->
 
-  <div id="studentMoreInfoSection"><!--beginning of student more info section-->
-    <div class="row"><!--first row-->
-      <div class="col-md-2"></div>
-      <div class="col-md-2">
-        <img src="images/DongSon.jpg" id="studentMoreInfoImg">
-      </div>
-
-      <div class="col-md-8">
-        <ul id="studentMoreInfoList">
-          <li id="studentMoreInfoName"><h4>Dong Son</h4></li>
-          <li id="studentMoreInfoSpecialty">JavaScript</li>
-          <li id="studentMoreInfoPortfolio"><a href="" id="studentMoreInfoPortfolioLink">Portfolio</a></li>
-        </ul> 
-      </div>
-    </div><!--end of first row-->
-    <div></br></div>
-
-    <div class="row"><!--second row-->
-      <div class="col-md-4">
-      </div>
-      <div class="col-md-2">
-        <a href="" id="studentMoreInfoLinkedin">Linkedin</a>
-      </div>
-      <div class="col-md-2">  
-        <a href="" id="studentMoreInfoFacebook">Facebook</a>
-      </div>
-      <div class="col-md-2">
-        <a href="" id="studentMoreInfoTwitter">Twitter</a>
-      </div>
-      <div class="col-md-2"></div>
-    </div><!--end of second row-->
-
-    <div class="row"><!--third row-->
-      <div class="col-md-4">
-      </div>
-      <div class="col-md-2">
-        <a href="" id="studentMoreInfoGithub">GitHub</a>
-      </div>
-      <div class="col-md-2">  
-        <a href="" id="studentMoreInfoStackOverflow">Stack Overflow</a>
-      </div>
-      <div class="col-md-2">
-      </div>
-      <div class="col-md-2"></div>
-    </div><!--end of third row-->
-
-    <div></br></div>
-
-    <div class="row"><!--fourth row-->
-      <div class="col-md-8">
-      </div>
-      <div class="col-md-2">
-        <button class="btn btn-sm btn-info" id="studentMoreInfoContactMe">Contact me</button>
-      </div>
-      <div class="col-md-2"></div>
-    </div><!--end of fourth row-->
-  </div><!--end of student more info section-->    
+   
 
   <div id="employerSection">
     <nav class="navbar navbar-default"><!--employer section-->
@@ -387,11 +361,14 @@
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
   </div><!-- /.modal -->
+
+<!--Scripts-->
   <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script type="text/javascript" src='jscripts/studentFill.js'></script>
   <script type="text/javascript" src='jscripts/githubAPI.js'></script>
+  <script type="text/javascript" src='jscripts/eventListenerHide.js'></script>
 
 </body>
 </html>

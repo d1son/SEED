@@ -1,4 +1,10 @@
 $(document).ready(function(){
+
+
+
+
+
+
   var githubUsername
   $('#githubButton').on('click', function(){
     $('#githubRepoModal').modal('show')
