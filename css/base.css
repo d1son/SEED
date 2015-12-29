@@ -88,3 +88,14 @@ ul {
 .listContainer {
   background-color: white;
 }
+.sm_images {
+  height: 75px;
+  width: 240px;
+  border: 1px solid black;
+  }
+  @media (min-width: 768px) {
+  .modal-dialog {
+    width: 1200px;
+    margin: 30px auto;
+  }
+}

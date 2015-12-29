@@ -190,41 +190,42 @@
 
             <div class="col-md-8">
               <ul id="studentMoreInfoList">
-                <li id="studentMoreInfoName"><h4></h4></li>
+                <li><h4 id="studentMoreInfoName"></h4></li>
                 <li id="studentMoreInfoSpecialty"></li>
-                <li id="studentMoreInfoPortfolio"><a href="" id="studentMoreInfoPortfolioLink">Portfolio</a></li>
+                <li id="studentMoreInfoPortfolio"><a href="" target="blank" id="studentMoreInfoPortfolioLink">Portfolio</a></li>
               </ul> 
             </div>
           </div><!--end of first row-->
           <div></br></div>
 
           <div class="row"><!--second row-->
-            <div class="col-md-4">
-            </div>
             <div class="col-md-2">
-              <a href="" id="studentMoreInfoLinkedin">Linkedin</a>
             </div>
-            <div class="col-md-2">  
-              <a href="" id="studentMoreInfoFacebook">Facebook</a>
+            <div class="col-md-3">
+              <a href="" target="blank" id="studentMoreInfoLinkedin"><img class="sm_images" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/LinkedIn_Logo.svg/2000px-LinkedIn_Logo.svg.png"></a>
             </div>
-            <div class="col-md-2">
-              <a href="" id="studentMoreInfoTwitter">Twitter</a>
+            <div class="col-md-3">  
+              <a href="" target="blank" id="studentMoreInfoFacebook"><img class="sm_images" src="http://www.underconsideration.com/brandnew/archives/facebook_2015_logo_detail.png"></a>
             </div>
-            <div class="col-md-2"></div>
+            <div class="col-md-3">
+              <a href="" target="blank" id="studentMoreInfoTwitter"><img src="http://techkindle.com/wp-content/uploads/2015/06/twitter-png1.png"   class="sm_images"></a>
+            </div>
+
+            <div class="col-md-1"></div>
           </div><!--end of second row-->
 
           <div class="row"><!--third row-->
-            <div class="col-md-4">
-            </div>
-            <div class="col-md-2">
-              <button id='githubButton'></button>
-            </div>
-            <div class="col-md-2">  
-              <a href="" id="studentMoreInfoStackOverflow">Stack Overflow</a>
-            </div>
             <div class="col-md-2">
             </div>
-            <div class="col-md-2"></div>
+            <div class="col-md-3">
+            <img id='githubImageLink' class="sm_images" src="http://doc.rultor.com/images/github-logo.png">
+            </div>
+            <div class="col-md-3">  
+              <a href="" target="blank" id="studentMoreInfoStackOverflow"><img src="https://blog.stackoverflow.com/images/wordpress/stackoverflow-logo-300.png"   class="sm_images"></a>
+            </div>
+            <div class="col-md-3">
+            </div>
+            <div class="col-md-1"></div>
           </div><!--end of third row-->
 
           <div></br></div>
@@ -233,7 +234,7 @@
             <div class="col-md-8">
             </div>
             <div class="col-md-2">
-              <button class="btn btn-sm btn-info" id="studentMoreInfoContactMe">Contact me</button>
+              <button class="btn btn-sm btn-info" id="studentMoreInfoContactMe">Contact me</button>     <button class="btn btn-sm btn-info" id="studentMoreInfoClose">Close</button>
             </div>
             <div class="col-md-2"></div>
           </div><!--end of fourth row-->
@@ -332,16 +333,20 @@
         <div class="modal-body">
           <div class=='container'>
             <h3>GitHub Reposotories</h3>
+            <a href="" target="blank" id="studentMoreInfoGithubProfileLink">Github Profile</a>
             <div class='row'>
-              <div class='col-md-4 list-group'>
+              <div class='col-md-3 list-group'>
                 
               </div>
-              <div class='col-md-8'>
+              <div class='col-md-9'>
                 <table class='table'>
                   <thead>
                     <th>Name</th>
                     <th>Date</th>
-                    <th>Message</th>
+                    <th>Messages: <span id='totalMessages'></span> Viewing: <span id='viewLow'></span> Through <span id='viewHigh'></span>
+                    <button id='githubModalPrevious'>Previous</button>
+                    <button id='githubModalNext'>Next</button>
+                    </th>
                   </thead>
                   <tbody id='tableBody'>
                     
