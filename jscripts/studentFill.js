@@ -94,7 +94,7 @@ $(document).ready(function(){
       expertiseDisplay += "Trello "
     }
     $('.moreStudentInfo').off()
-    newStudent = $('<div>').addClass('col-md-4')
+    newStudent = $('<div>').addClass('col-md-4 student')
       .append($('<div>').addClass('row')
         .append($('<div>').addClass('col-md-4')
           .append($("<img>").attr('src', studentInfo.githubProfilePicture).addClass('studentPicture')))
@@ -103,12 +103,11 @@ $(document).ready(function(){
           .append($("<p>").html(studentInfo.email))))
       .append($('<div>').addClass('row')
         .append($('<div>').addClass('col-md-8')
-          .append($('<div>').html(expertiseDisplay)))
+          .append($('<div>').addClass('expertise').html(expertiseDisplay)))
         .append($('<div>').addClass('col-md-4')
           .append($("<button>").html('More Info').attr('type','button').addClass("btn-sm btn-info moreStudentInfo").attr('data-name', studentInfo.name))))
     $('#studentList').append(newStudent)
     $('.moreStudentInfo').on('click', moreInfoButton)
-
   }
 
   function moreInfoButton() {
@@ -234,5 +233,43 @@ $(document).ready(function(){
         });
 
   };
+  $(".expertiseCheckboxs").on('click', function(){
+    var expertise 
+    var expertiseCheck
+    var idSplit = []
+    var loopCheck = 0
+    var checkState = $(this).prop('checked')
+    $(".expertiseCheckboxs").each(function(){//Finds all checked boxes
+      if($(this).prop('checked')){
+      idSplit.push($(this).attr('id'))//If box is checked, push id to an array
+      }
+    })
+    $('.expertise').each(function(){
+      expertise = $(this).html()
+      loopCheck = 0
+      var splitString = []
+      splitString = expertise.split(" ");
+      for(i=0;i<idSplit.length;i++){//Filter options seleceted
+        expertiseCheck = false;//Reset check 
+        for(j=0;j<splitString.length;j++){//Amenities List of Results
+          if(splitString[j] === idSplit[i]){//If both are equal and the div is active, sets amenities to true
+            expertiseCheck = true
+          }
+        }
+        if(expertiseCheck){//If the ids matched, add one to loop count
+          loopCheck++
+        }
+      };
+      if(loopCheck == idSplit.length){//if ever amenities selected come back true, show that div
+        $(this).parent().parent().parent().show()
+
+      }
+      else{
+        $(this).parent().parent().parent().hide()
+
+      }
+
+    });
+  });
 
 });
