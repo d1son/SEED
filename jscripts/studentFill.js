@@ -11,6 +11,7 @@ $(document).ready(function(){
     e.preventDefault()
     $('#studentPage').show()
     $('#studentList').show()
+    $('.filter').show()
     fillStudentList()
   });
   $('#employerNavBar').on('click', function(){

@@ -21,7 +21,7 @@ input[type=checkbox]
 .checkbox-grid li {
     display: inline-block;
     float: left;
-    width: 25%;
+    width: 20%;
 }
 #expertiseLabel{
   text-align: center;
@@ -81,5 +81,10 @@ ul {
     right:0px;
     margin-bottom:60px;
     z-index: 1000;
-    background-color: white;
+    width: 100%;
+    border-width: 2px;
+    border-style: solid;
+}
+.listContainer {
+  background-color: white;
 }
