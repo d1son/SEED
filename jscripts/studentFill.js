@@ -7,11 +7,9 @@ $(document).ready(function(){
   fbase.on("child_added", function(snapshot){
     studentList[studentList.length] = snapshot.val()
   });
-//Hide Div
-  $('#studentMoreInfo').hide()
 
 //Dynamically Create students
-  $('#studentFill').on('click',function(){
+  $('#studentFill').on('click', function(){
     var githubUsername = ""
     var studentInfo
     arrayIndex = 0
@@ -27,6 +25,7 @@ $(document).ready(function(){
       url: "https://api.github.com/users/" + url,
       success: function (user){
         githubPicture = user.avatar_url
+        debugger;
       }
 
       }).done(function(){
@@ -77,11 +76,20 @@ $(document).ready(function(){
         expertiseArray.push($(this).attr('id'))
       }
     });
+    var githubProfilePicture = github.slice((github.lastIndexOf('/') + 1),github.length)
+    $.ajax({
+      type: 'GET',
+      url: "https://api.github.com/users/" + githubProfilePicture,
+      success: function (user){
+        githubProfilePicture = user.avatar_url
+      }
 
+      });
     var student = {
       "name": name,
       "email": email,
       "github": github,
+      "githubProfilePicture": "",
       "linkedin": linkedin,
       "stackoverflow": stackoverflow,
       "portfolio": portfolio,
@@ -158,9 +166,5 @@ $(document).ready(function(){
     fbase.push(student)
     $('#studentFormModal').modal('hide')
 
-  });
-
-  $('#studentForm').on('click', function(){
-    $('#studentFormModal').modal('show')
   });
 });
