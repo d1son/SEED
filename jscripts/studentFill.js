@@ -6,6 +6,8 @@ $(document).ready(function(){
   $('#employerSection').hide()
   $('.filter').hide()
   $('.studentSectionNavBar').hide()
+  $('#footer').hide()
+
 //EventListeners
   $('#student-employee').on('click', function(e){
     e.preventDefault()
@@ -45,12 +47,65 @@ $(document).ready(function(){
 
   
   function createStudentDisplay(studentInfo){
+    var expertiseDisplay = ""
+    if(studentInfo.expertise.javascript === true){
+      expertiseDisplay += "Javascript "
+    }
+    if(studentInfo.expertise.jquery === true){
+      expertiseDisplay += "Jquery "
+    }
+    if(studentInfo.expertise.node.js === true){
+      expertiseDisplay += "Node.js "
+    }
+    if(studentInfo.expertise.express === true){
+      expertiseDisplay += "Express "
+    }
+    if(studentInfo.expertise.html5 === true){
+      expertiseDisplay += "HTML5/CSS3 "
+    }
+    if(studentInfo.expertise.bootstrap === true){
+      expertiseDisplay += "Bootstrap "
+    }
+    if(studentInfo.expertise.git === true){
+      expertiseDisplay += "Git "
+    }
+    if(studentInfo.expertise.angular.js === true){
+      expertiseDisplay += "Angular.js "
+    }
+    if(studentInfo.expertise.lodash === true){
+      expertiseDisplay += "Lodash "
+    }
+    if(studentInfo.expertise.json === true){
+      expertiseDisplay += "JSON/API "
+    }
+    if(studentInfo.expertise.restful === true){
+      expertiseDisplay += "RESTful API "
+    }
+    if(studentInfo.expertise.firebase === true){
+      expertiseDisplay += "Firebase "
+    }
+    if(studentInfo.expertise.mysql === true){
+      expertiseDisplay += "MySQL "
+    }
+    if(studentInfo.expertise.ajax === true){
+      expertiseDisplay += "Ajax "
+    }
+    if(studentInfo.expertise.trello === true){
+      expertiseDisplay += "Trello "
+    }
     $('.moreStudentInfo').off()
     newStudent = $('<div>').addClass('col-md-4')
-      .append($("<img>").attr('src', studentInfo.githubProfilePicture).addClass('studentPicture'))
-      .append($("<p>").html(studentInfo.name))
-      .append($("<p>").html(studentInfo.email))
-      .append($("<button>").html('More Info').attr('type','button').addClass("btn-sm btn-info moreStudentInfo").attr('data-name', studentInfo.name))
+      .append($('<div>').addClass('row')
+        .append($('<div>').addClass('col-md-4')
+          .append($("<img>").attr('src', studentInfo.githubProfilePicture).addClass('studentPicture')))
+        .append($('<div>').addClass('col-md-8')
+          .append($("<h3>").html(studentInfo.name))
+          .append($("<p>").html(studentInfo.email))))
+      .append($('<div>').addClass('row')
+        .append($('<div>').addClass('col-md-8')
+          .append($('<div>').html(expertiseDisplay)))
+        .append($('<div>').addClass('col-md-4')
+          .append($("<button>").html('More Info').attr('type','button').addClass("btn-sm btn-info moreStudentInfo").attr('data-name', studentInfo.name))))
     $('#studentList').append(newStudent)
     $('.moreStudentInfo').on('click', moreInfoButton)
 
