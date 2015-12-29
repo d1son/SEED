@@ -12,6 +12,7 @@
     <div class="container-fluid">
       <div class="navbar-header">
         <a class="navbar-brand" href="#">SEED</a>
+          <img src="images/test.jpg" id="seedImage">
       </div>
       <div>
         <ul class="nav navbar-nav navbar-right">
@@ -155,6 +156,7 @@
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand" href="#">SEED</a>
+          <img src="images/test.jpg" id="seedImage">
         </div>
         
         <form class="navbar-form navbar-left" role="search" id="formStudentSearch">
@@ -273,6 +275,82 @@
     </div><!--end of fourth row-->
   </div><!--end of student more info section-->    
 
+  <div id="employerSection">
+    <nav class="navbar navbar-default"><!--employer section-->
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">SEED</a>
+          <img src="images/test.jpg" id="seedImage">
+        </div>
+        <div>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active" id=""><a href="">Home</a><li>   
+            <li><a href="#">Student/Employee</a></li>
+            <li><a href="#">Contact</a><li>
+           </ul> 
+        </div>
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="col-md-4">
+      <form role="search" id="formCompanySearch">
+        <div class="form-group">
+          <label>Search by Company</label>
+          <input type="text" class="form-control" placeholder="Company">
+        </div>
+      </form>
+    </div>
+    <div class="col-md-4">
+      <form role="search" id="formLocationSearch">
+        <div class="form-group">
+          <label>Search by Location</label>
+          <input type="text" class="form-control" placeholder="Location">
+        </div>
+      </form>
+    </div>
+    <div class="col-md-4">
+      <form role="search" id="formJobSearch">
+        <div class="form-group">
+          <label>Search by Job</label>
+          <input type="text" class="form-control" placeholder="Job">
+        </div>
+      </form>
+    </div>
+    <div class="col-md-8"></div>
+    <div class="col-md-4">
+      <a href='https://www.glassdoor.com/index.htm'>powered by <img src='https://www.glassdoor.com/static/img/api/glassdoor_logo_80.png' title='Job Search' /></a>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <ul>
+          <li><label id="getCompanyName1">Company Name</label></li>
+          <li><label id="getWebsite1">Website</label></li>
+          <li><label id="getIndustry1">Industry</label></li>
+        </ul>  
+        <img src="" id="getCompanyImage1" class="companyImage">
+        <button class="btn btn-info btn-sm">More Info</button>
+      </div>   
+      <div class="col-md-4">
+        <ul>
+          <li><label id="getCompanyName2">Company Name</label></li>
+          <li><label id="getWebsite2">Website</label></li>
+          <li><label id="getIndustry2">Industry</label></li>
+        </ul>  
+        <img src="" id="getCompanyImage2" class="companyImage">
+        <button class="btn btn-info btn-sm">More Info</button>
+      </div> 
+      <div class="col-md-4">
+        <ul>
+          <li><label id="getCompanyName3">Company Name</label></li>
+          <li><label id="getWebsite3">Website</label></li>
+          <li><label id="getIndustry3">Industry</label></li>
+        </ul>  
+        <img src="" id="getCompanyImage3" class="companyImage">
+        <button class="btn btn-info btn-sm">More Info</button>  
+      </div> 
+    </div><!--end of employer section-->
+  </div>
 
 <!--github Modal-->
   <div id='githubRepoModal' class="modal fade" tabindex="1" role="dialog">
