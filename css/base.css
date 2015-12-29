@@ -80,4 +80,6 @@ ul {
     left:0px;
     right:0px;
     margin-bottom:60px;
+    z-index: 1000;
+    background-color: white;
 }
