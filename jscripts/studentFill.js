@@ -1,4 +1,9 @@
 $(document).ready(function(){
+//Variables    
+  var fbase = new Firebase('https://incandescent-heat-4625.firebaseio.com/');
+  window.studentList = []
+  var newStudent
+  var githubPicture
 //HIDE
   $('#studentList').hide()
   $('#studentMoreInfo').hide()
@@ -26,10 +31,8 @@ $(document).ready(function(){
     $('#studentFormModal').modal('show')
   });
   $('#submitForm').on('click', createNewStudent)
-  var fbase = new Firebase('https://incandescent-heat-4625.firebaseio.com/');
-  window.studentList = []
-  var newStudent
-  var githubPicture
+  $(".expertiseCheckboxs").on('click', expertiseFilter)
+
 //Populate studentList
   fbase.on("child_added", function(snapshot){
     studentList[studentList.length] = snapshot.val()
@@ -44,8 +47,6 @@ $(document).ready(function(){
         createStudentDisplay(studentList[i])
       }
   };
-
-  
   function createStudentDisplay(studentInfo){
     var expertiseDisplay = ""
     if(studentInfo.expertise.javascript === true){
@@ -109,7 +110,6 @@ $(document).ready(function(){
     $('#studentList').append(newStudent)
     $('.moreStudentInfo').on('click', moreInfoButton)
   }
-
   function moreInfoButton() {
     var student = $(this).attr('data-name')
     $('#studentList').hide()
@@ -119,9 +119,21 @@ $(document).ready(function(){
         student = studentList[i]
       }
     }
-    $('#githubButton').attr('data-giturl', student.github)
-  }
+    $('#githubImageLink').attr('data-giturl', student.github)
+    $('#studentMoreInfoGithubProfileLink').attr('href', student.github)
+    $('#studentMoreInfoImg').attr('src', student.githubProfilePicture)
+    $('#studentMoreInfoName').html(student.name)
+    $('#studentMoreInfoPortfolioLink').attr('href', student.portfolio)
+    $('#studentMoreInfoLinkedin').attr('href', student.linkedin)
+    $('#studentMoreInfoFacebook').attr('href', student.facebook)
+    $('#studentMoreInfoTwitter').attr('href', student.twitter)
+    $('#studentMoreInfoStackOverflow').attr('href', student.stackoverflow)
+    $('#studentMoreInfoClose').on('click', function(){
+      $('#studentList').show()
+      $('#studentMoreInfo').hide()
+    });
 
+  }
 //New Student 
   function createNewStudent(e){
     e.preventDefault()
@@ -233,7 +245,7 @@ $(document).ready(function(){
         });
 
   };
-  $(".expertiseCheckboxs").on('click', function(){
+  function expertiseFilter(){
     var expertise 
     var expertiseCheck
     var idSplit = []
@@ -270,6 +282,6 @@ $(document).ready(function(){
       }
 
     });
-  });
+  };
 
 });
