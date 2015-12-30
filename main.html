@@ -16,22 +16,13 @@
       </div>
       <div>
         <ul class="nav navbar-nav navbar-right">
-          <li class="active" id="student-employee"><a href="#studentSection">Student/Employee</a><li>   
-          <li><a href="#">Employer</a></li>
-          <li><a href="#">Contact</a><li>
+          <li class="active" id="student-employee"><a href="">Student/Employee</a><li>   
+          <li id="employerNavBar"><a href="#">Employer</a></li>
+          <li id="contactNavBar"><a href="#">Contact</a><li>
          </ul> 
       </div>
     </div><!-- /.container-fluid -->
   </nav>
-
-  <div class='container'>
-    <div class='row'>
-      <div class='col-md-12' id='studentListTest'>
-        <button id='studentFill'>Fill Div</button>
-        <button id='studentForm'>Add a Student</button>
-      </div>
-    </div>
-  </div>
 <!--New Student Form Modal-->
   <div id='studentFormModal' class="modal fade" tabindex="1" role="dialog">
     <div class="modal-dialog">
@@ -122,9 +113,9 @@
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
   </div><!-- /.modal -->
-
-  <div class="row"><!--footer-->
-    <div class="col-md-4">
+<!--footer-->
+  <div class="row" id="footer">
+    <div class="col-md-4 listContainer">
      <ul>
         <li><h4>About Us</h4></li>   
         <li>Team</li>
@@ -133,7 +124,7 @@
       </ul> 
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-4 listContainer">
       <ul>
         <li><h4>Contact Us</h4></li>   
         <li>Call 000-000-0000</li>
@@ -141,7 +132,7 @@
         <li>New Brunswick, NJ</li>
       </ul> 
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 listContainer">
      <ul>
         <li><h4>Our Blog</h4></li>   
         <li>All Posts</li>
@@ -150,6 +141,9 @@
       </ul> 
     </div>
   </div><!--end of footer-->
+<!--beginning of the student/employee section-->
+  <div>
+    <div class="form-group filter">
 
   <div id="studentSection"><!--beginning of the student/employee section-->
     <nav class="navbar navbar-default">
@@ -180,100 +174,104 @@
     <div class="form-group">
       <label class="control-label col-md-12" id='expertiseFilterLabel' for="expertiseFilter">Filter by Expertise:</label>
       <div class='row'>
-        <div class="col-md-12">
+        <div class="col-md-6">
           <ul class='checkbox-grid'>
-            <li><input type="checkbox" class="expertiseCheckboxs" id='javascriptFilter'>JavaScript</li>
-            <li><input type="checkbox" class="expertiseCheckboxs" id='jqueryFilter'>jquery</li>
-            <li><input type="checkbox" class="expertiseCheckboxs" id='nodeFilter'>Node.js</li>
-            <li><input type="checkbox" class="expertiseCheckboxs" id='expressFilter'>Express</li>
-            <li><input type="checkbox" class="expertiseCheckboxs" id='html5Filter'>HTML5/CSS3</li>    
-            <li><input type="checkbox" class="expertiseCheckboxs" id='bootstrapFilter'>Bootstrap</li>
-            <li><input type="checkbox" class="expertiseCheckboxs" id='gitFilter'>Git</li>
-            <li><input type="checkbox" class="expertiseCheckboxs" id='angularFilter'>Angular.js</li>  
-            <li><input type="checkbox" class="expertiseCheckboxs" id='lodashFilter'>Lodash</li>
-            <li><input type="checkbox" class="expertiseCheckboxs" id='jsonFilter'>API/JSON</li>
-            <li><input type="checkbox" class="expertiseCheckboxs" id='restfulFilter'>RESful API</li>
-            <li><input type="checkbox" class="expertiseCheckboxs" id='firebaseFilter'>Firebase</li>
-            <li><input type="checkbox" class="expertiseCheckboxs" id='mysqlFilter'>MySQL</li>
-            <li><input type="checkbox" class="expertiseCheckboxs" id='ajaxFilter'>Ajax</li>
-            <li><input type="checkbox" class="expertiseCheckboxs" id='trelloFilter'>Trello</li>
+            <li><input type="checkbox" class="expertiseCheckboxs" id='Javascript'>JavaScript</li>
+            <li><input type="checkbox" class="expertiseCheckboxs" id='Jquery'>jquery</li>
+            <li><input type="checkbox" class="expertiseCheckboxs" id='Node.js'>Node.js</li>
+            <li><input type="checkbox" class="expertiseCheckboxs" id='Express'>Express</li>
+            <li><input type="checkbox" class="expertiseCheckboxs" id='HTML5/CSS3'>HTML5/CSS3</li>    
+            <li><input type="checkbox" class="expertiseCheckboxs" id='Bootstrap'>Bootstrap</li>
+            <li><input type="checkbox" class="expertiseCheckboxs" id='Git'>Git</li>
+            <li><input type="checkbox" class="expertiseCheckboxs" id='Angular.js'>Angular.js</li>  
+            <li><input type="checkbox" class="expertiseCheckboxs" id='Lodash'>Lodash</li>
+            <li><input type="checkbox" class="expertiseCheckboxs" id='JSON/API'>API/JSON</li>
+            <li><input type="checkbox" class="expertiseCheckboxs" id='RESTful API'>RESful API</li>
+            <li><input type="checkbox" class="expertiseCheckboxs" id='Firebase'>Firebase</li>
+            <li><input type="checkbox" class="expertiseCheckboxs" id='MySQL'>MySQL</li>
+            <li><input type="checkbox" class="expertiseCheckboxs" id='Ajax'>Ajax</li>
+            <li><input type="checkbox" class="expertiseCheckboxs" id='Trello'>Trello</li>
           </ul>
         </div>
+        <div class='col-md-6'>
+          <button id='addStudent'>Add Student</button>
+        </div>
       </div>
     </div>
-    <div>
-      <h4 id="studentsSectionHeader">Students</h4>
-    </div>
-    <div class='container'>
-      <div class='row' id='studentList'>
 
+  <!--Student Page-->
+    <div class='container-fluid' id='studentPage'>
+      <div class='row' id='studentList'>
+        <div>
+          <h4 id="studentsSectionHeader">Students</h4>
+
+        </div>
       </div>
       <div class='row' id='studentMoreInfo'>
-        <div>
-        github
-        <button id='githubButton'>Github Repos</button>
-        </div>
+      <!--beginning of student more info section-->
+        <div id="studentMoreInfoSection">
+          <div class="row"><!--first row-->
+            <div class="col-md-2"></div>
+            <div class="col-md-2">
+              <img src="" id="studentMoreInfoImg">
+            </div>
+
+            <div class="col-md-8">
+              <ul id="studentMoreInfoList">
+                <li><h4 id="studentMoreInfoName"></h4></li>
+                <li id="studentMoreInfoSpecialty"></li>
+                <li id="studentMoreInfoPortfolio"><a href="" target="blank" id="studentMoreInfoPortfolioLink">Portfolio</a></li>
+              </ul> 
+            </div>
+          </div><!--end of first row-->
+          <div></br></div>
+
+          <div class="row"><!--second row-->
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-3">
+              <a href="" target="blank" id="studentMoreInfoLinkedin"><img class="sm_images" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/LinkedIn_Logo.svg/2000px-LinkedIn_Logo.svg.png"></a>
+            </div>
+            <div class="col-md-3">  
+              <a href="" target="blank" id="studentMoreInfoFacebook"><img class="sm_images" src="http://www.underconsideration.com/brandnew/archives/facebook_2015_logo_detail.png"></a>
+            </div>
+            <div class="col-md-3">
+              <a href="" target="blank" id="studentMoreInfoTwitter"><img src="http://techkindle.com/wp-content/uploads/2015/06/twitter-png1.png"   class="sm_images"></a>
+            </div>
+
+            <div class="col-md-1"></div>
+          </div><!--end of second row-->
+
+          <div class="row"><!--third row-->
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-3">
+            <img id='githubImageLink' class="sm_images" src="http://doc.rultor.com/images/github-logo.png">
+            </div>
+            <div class="col-md-3">  
+              <a href="" target="blank" id="studentMoreInfoStackOverflow"><img src="https://blog.stackoverflow.com/images/wordpress/stackoverflow-logo-300.png"   class="sm_images"></a>
+            </div>
+            <div class="col-md-3">
+            </div>
+            <div class="col-md-1"></div>
+          </div><!--end of third row-->
+
+          <div></br></div>
+
+          <div class="row"><!--fourth row-->
+            <div class="col-md-8">
+            </div>
+            <div class="col-md-2">
+              <button class="btn btn-sm btn-info" id="studentMoreInfoContactMe">Contact me</button>     <button class="btn btn-sm btn-info" id="studentMoreInfoClose">Close</button>
+            </div>
+            <div class="col-md-2"></div>
+          </div><!--end of fourth row-->
+        </div><!--end of student more info section-->    
       </div>
     </div>
   </div><!--end of student/employee section-->
 
-  <div id="studentMoreInfoSection"><!--beginning of student more info section-->
-    <div class="row"><!--first row-->
-      <div class="col-md-2"></div>
-      <div class="col-md-2">
-        <img src="images/DongSon.jpg" id="studentMoreInfoImg">
-      </div>
-
-      <div class="col-md-8">
-        <ul id="studentMoreInfoList">
-          <li id="studentMoreInfoName"><h4>Dong Son</h4></li>
-          <li id="studentMoreInfoSpecialty">JavaScript</li>
-          <li id="studentMoreInfoPortfolio"><a href="" id="studentMoreInfoPortfolioLink">Portfolio</a></li>
-        </ul> 
-      </div>
-    </div><!--end of first row-->
-    <div></br></div>
-
-    <div class="row"><!--second row-->
-      <div class="col-md-4">
-      </div>
-      <div class="col-md-2">
-        <a href="" id="studentMoreInfoLinkedin">Linkedin</a>
-      </div>
-      <div class="col-md-2">  
-        <a href="" id="studentMoreInfoFacebook">Facebook</a>
-      </div>
-      <div class="col-md-2">
-        <a href="" id="studentMoreInfoTwitter">Twitter</a>
-      </div>
-      <div class="col-md-2"></div>
-    </div><!--end of second row-->
-
-    <div class="row"><!--third row-->
-      <div class="col-md-4">
-      </div>
-      <div class="col-md-2">
-        <a href="" id="studentMoreInfoGithub">GitHub</a>
-      </div>
-      <div class="col-md-2">  
-        <a href="" id="studentMoreInfoStackOverflow">Stack Overflow</a>
-      </div>
-      <div class="col-md-2">
-      </div>
-      <div class="col-md-2"></div>
-    </div><!--end of third row-->
-
-    <div></br></div>
-
-    <div class="row"><!--fourth row-->
-      <div class="col-md-8">
-      </div>
-      <div class="col-md-2">
-        <button class="btn btn-sm btn-info" id="studentMoreInfoContactMe">Contact me</button>
-      </div>
-      <div class="col-md-2"></div>
-    </div><!--end of fourth row-->
-  </div><!--end of student more info section-->    
+   
 
   <div id="employerSection">
     <nav class="navbar navbar-default"><!--employer section-->
@@ -387,16 +385,20 @@
         <div class="modal-body">
           <div class=='container'>
             <h3>GitHub Reposotories</h3>
+            <a href="" target="blank" id="studentMoreInfoGithubProfileLink">Github Profile</a>
             <div class='row'>
-              <div class='col-md-4 list-group'>
+              <div class='col-md-3 list-group'>
                 
               </div>
-              <div class='col-md-8'>
+              <div class='col-md-9'>
                 <table class='table'>
                   <thead>
                     <th>Name</th>
                     <th>Date</th>
-                    <th>Message</th>
+                    <th>Messages: <span id='totalMessages'></span> Viewing: <span id='viewLow'></span> Through <span id='viewHigh'></span>
+                    <button id='githubModalPrevious'>Previous</button>
+                    <button id='githubModalNext'>Next</button>
+                    </th>
                   </thead>
                   <tbody id='tableBody'>
                     
@@ -411,13 +413,15 @@
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
   </div><!-- /.modal -->
+
+<!--Scripts-->
+
   <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script type="text/javascript" src='jscripts/studentFill.js'></script>
   <script type="text/javascript" src='jscripts/githubAPI.js'></script>
   <script type="text/javascript" src="jscripts/getGlassdoorEmployer.js"></script>
-  
 
 </body>
 </html>
