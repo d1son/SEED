@@ -144,6 +144,34 @@
 <!--beginning of the student/employee section-->
   <div>
     <div class="form-group filter">
+
+  <div id="studentSection"><!--beginning of the student/employee section-->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">SEED</a>
+          <img src="images/test.jpg" id="seedImage">
+        </div>
+        
+        <form class="navbar-form navbar-left" role="search" id="formStudentSearch">
+          <div class="form-group">
+            <label>Search</label>
+            <input type="text" class="form-control" placeholder="Search for students">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+
+        <div>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#student-employee">Home</a><li>   
+            <li><a href="#">Employer</a></li>
+            <li><a href="#">Contact</a><li>
+           </ul> 
+        </div>
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="form-group">
       <label class="control-label col-md-12" id='expertiseFilterLabel' for="expertiseFilter">Filter by Expertise:</label>
       <div class='row'>
         <div class="col-md-6">
@@ -262,30 +290,54 @@
       </div><!-- /.container-fluid -->
     </nav>
 
-    <div class="col-md-4">
-      <form role="search" id="formCompanySearch">
-        <div class="form-group">
-          <label>Search by Company</label>
-          <input type="text" class="form-control" placeholder="Company">
-        </div>
-      </form>
+    <div class="row"><!--beginning of company and job search-->
+      <div class="col-md-2"></div>
+      <div class="col-md-4">
+        <form role="search" id="formCompanySearch">
+          <div class="form-group">
+            <label>Search by Company</label>
+            <input type="text" class="form-control" id="searchCompany" placeholder="Company">
+          </div>
+        </form>
+      </div>
+      <div class="col-md-4">
+        <form role="search" id="formLocationSearch">
+          <div class="form-group">
+            <label>Company Location</label>
+            <input type="text" class="form-control" id="searchCompnayLocation" placeholder="Company Location">
+          </div>
+        </form>
+      </div>
+      <div class="col-md-2">
+        <label>Submit Search</label>
+        <button type="submit" class="btn btn-default" id="submitCompanySearch">Submit</button>
+      </div>
     </div>
-    <div class="col-md-4">
-      <form role="search" id="formLocationSearch">
-        <div class="form-group">
-          <label>Search by Location</label>
-          <input type="text" class="form-control" placeholder="Location">
-        </div>
-      </form>
-    </div>
-    <div class="col-md-4">
-      <form role="search" id="formJobSearch">
-        <div class="form-group">
-          <label>Search by Job</label>
-          <input type="text" class="form-control" placeholder="Job">
-        </div>
-      </form>
-    </div>
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-4">
+        <form role="search" id="formJobSearch">
+          <div class="form-group">
+            <label>Search by Job</label>
+            <input type="text" class="form-control" id="searchJob" placeholder="Job">
+          </div>
+        </form>
+      </div>
+      <div class="col-md-4">
+        <form role="search" id="formLocationSearch">
+          <div class="form-group">
+            <label>Job Location</label>
+            <input type="text" class="form-control" id="searchJobLocation" placeholder="Job Location">
+          </div>
+        </form>
+      </div>
+      <div class="col-md-2">
+        <label>Submit Search</label>
+        <button type="submit" class="btn btn-default" id="submitJobSearch">Submit</button>
+      </div>
+    </div><!--end of company and job search-->
+
+    
     <div class="col-md-8"></div>
     <div class="col-md-4">
       <a href='https://www.glassdoor.com/index.htm'>powered by <img src='https://www.glassdoor.com/static/img/api/glassdoor_logo_80.png' title='Job Search' /></a>
@@ -363,6 +415,7 @@
   </div><!-- /.modal -->
 
 <!--Scripts-->
+
   <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
