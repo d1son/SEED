@@ -1,9 +1,10 @@
 $(document).ready(function(){
   var githubUsername
   var githubCommitArray = []
-  var commitLength = 10
-  var z = 0
+  var commitLengthHigh = 10
+  var commitLengthLow = 0
   var totalCommits
+
   $('#githubImageLink').on('click', function(){
     $('#githubRepoModal').modal('show')
     githubUsername = $('#githubImageLink').attr('data-giturl')
@@ -32,8 +33,8 @@ $(document).ready(function(){
           }
           limitCommits(githubCommitArray)
           $("#totalMessages").html(githubCommitArray.length + 1)
-          $("#viewLow").html(z + 1)
-          $("#viewHigh").html(commitLength)
+          $("#viewLow").html(commitLengthLow + 1)
+          $("#viewHigh").html(commitLengthHigh)
 
         }
       })
@@ -53,10 +54,25 @@ $(document).ready(function(){
   });
 
     $('#githubModalPrevious').on('click', function(){
+      if(commitLengthLow === 0){
 
+      }
+      else{
+        $("tbody").empty()
+        commitLengthLow -= 10
+        commitLengthHigh -= 10
+        limitCommits(githubCommitArray)
+        $("#viewLow").html(commitLengthLow + 1)
+        $("#viewHigh").html(commitLengthHigh)
+      }
     });
     $('#githubModalNext').on('click', function(){
-      //z = 
+        $("tbody").empty()
+        commitLengthLow += 10
+        commitLengthHigh += 10
+        limitCommits(githubCommitArray)
+        $("#viewLow").html(commitLengthLow + 1)
+        $("#viewHigh").html(commitLengthHigh)
     });
 
   function getRepos(repoData){
@@ -84,9 +100,11 @@ $(document).ready(function(){
     return newTableRow;
   }
   function limitCommits(commits){
-    for(; z < commits.length && z < commitLength; z++) {
+    console.log(commitLengthLow)
+    console.log(commitLengthHigh)
+    for(var z = commitLengthLow; z < commits.length && z < commitLengthHigh; z++) {
       $("tbody").append(fillTable(commits[z]))
-      console.log(z)
+
     }
   }
 });
