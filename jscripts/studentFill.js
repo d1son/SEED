@@ -20,8 +20,12 @@ $(document).ready(function(){
     $('.filter').show()
     fillStudentList()
   });
-  $('#employerNavBar').on('click', function(){
-
+  $('#employerNavBar').on('click', function(e){   //employer link on navbar
+    e.preventDefault()
+    $('#studentPage').hide()
+    $('#studentList').hide()
+    $('.filter').hide()
+    $("#employerSection").show()
   });
   $('#contactNavBar').on('click', function(){
 
