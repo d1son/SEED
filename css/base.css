@@ -21,7 +21,7 @@ input[type=checkbox]
 .checkbox-grid li {
     display: inline-block;
     float: left;
-    width: 25%;
+    width: 20%;
 }
 #expertiseLabel{
   text-align: center;
@@ -72,4 +72,30 @@ ul {
 #seedImage {
   height: 50px;
   width: 40px;
+}
+#footer {
+    position:fixed;
+    height:50px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    margin-bottom:60px;
+    z-index: 1000;
+    width: 100%;
+    border-width: 2px;
+    border-style: solid;
+}
+.listContainer {
+  background-color: white;
+}
+.sm_images {
+  height: 75px;
+  width: 240px;
+  border: 1px solid black;
+  }
+  @media (min-width: 768px) {
+  .modal-dialog {
+    width: 1200px;
+    margin: 30px auto;
+  }
 }
