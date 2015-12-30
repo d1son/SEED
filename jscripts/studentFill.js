@@ -11,7 +11,6 @@ $(document).ready(function(){
   $('#employerSection').hide()
   $('.filter').hide()
   $('.studentSectionNavBar').hide()
-  $('#footer').hide()
 
 //EventListeners
   $('#student-employee').on('click', function(e){
