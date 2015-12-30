@@ -18,13 +18,31 @@ $(document).ready(function(){
     $('#studentPage').show()
     $('#studentList').show()
     $('.filter').show()
+    $('#mainNavbar').hide()                         //added to hide the main navbar
     fillStudentList()
   });
-  $('#employerNavBar').on('click', function(e){   //employer link on navbar
+  $('#student-employee-1').on('click', function(e){   //student link on employer navbar
+    e.preventDefault()
+    $('#studentPage').show()
+    $('#studentList').show()
+    $('.filter').show()
+    $('#mainNavbar').hide()
+    fillStudentList()
+  });
+  $('#employerNavBar-1').on('click', function(e){   //employer link on student navbar
     e.preventDefault()
     $('#studentPage').hide()
     $('#studentList').hide()
     $('.filter').hide()
+    $('#mainNavbar').hide()
+    $("#employerSection").show()
+  });
+  $('#employerNavBar').on('click', function(e){   //employer link on main navbar
+    e.preventDefault()
+    $('#studentPage').hide()
+    $('#studentList').hide()
+    $('.filter').hide()
+    $('#mainNavbar').hide()
     $("#employerSection").show()
   });
   $('#contactNavBar').on('click', function(){
