@@ -27,6 +27,7 @@ $(document).ready(function(){
     $('#studentList').show()
     $('.filter').show()
     $('#mainNavbar').hide()
+    $("#employerSection").hide()
     fillStudentList()
   });
   $('#employerNavBar-1').on('click', function(e){   //employer link on student navbar
