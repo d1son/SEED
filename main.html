@@ -8,7 +8,7 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-default">
+  <nav id="mainNavbar" class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
         <a class="navbar-brand" href="#">SEED</a>
@@ -142,8 +142,7 @@
     </div>
   </div><!--end of footer-->
 <!--beginning of the student/employee section-->
-  <div>
-    <div class="form-group filter">
+<div class="form-group filter">
 
   <div id="studentSection"><!--beginning of the student/employee section-->
     <nav class="navbar navbar-default">
@@ -163,8 +162,8 @@
 
         <div>
           <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="#student-employee">Home</a><li>   
-            <li><a href="#">Employer</a></li>
+            <li class="active"><a href="">Home</a><li>   
+            <li id="employerNavBar-1"><a href="#">Employer</a></li>
             <li><a href="#">Contact</a><li>
            </ul> 
         </div>
@@ -207,11 +206,12 @@
 
         </div>
       </div>
-      <div class='row' id='studentMoreInfo'>
+      <div id='studentMoreInfo'>
       <!--beginning of student more info section-->
         <div id="studentMoreInfoSection">
           <div class="row"><!--first row-->
-            <div class="col-md-2"></div>
+            <div class="col-md-2">
+            </div>
             <div class="col-md-2">
               <img src="" id="studentMoreInfoImg">
             </div>
@@ -269,12 +269,13 @@
         </div><!--end of student more info section-->    
       </div>
     </div>
-  </div><!--end of student/employee section-->
-
+  </div>
+</div>
+<!--end of student/employee section-->
    
-
+<!--employer section-->
   <div id="employerSection">
-    <nav class="navbar navbar-default"><!--employer section-->
+    <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand" href="#">SEED</a>
@@ -283,7 +284,7 @@
         <div>
           <ul class="nav navbar-nav navbar-right">
             <li class="active" id=""><a href="">Home</a><li>   
-            <li><a href="#">Student/Employee</a></li>
+            <li><a id="student-employee-1" href="#">Student/Employee</a></li>
             <li><a href="#">Contact</a><li>
            </ul> 
         </div>
@@ -337,10 +338,11 @@
       </div>
     </div><!--end of company and job search-->
 
-    
-    <div class="col-md-8"></div>
-    <div class="col-md-4">
-      <a href='https://www.glassdoor.com/index.htm'>powered by <img src='https://www.glassdoor.com/static/img/api/glassdoor_logo_80.png' title='Job Search' /></a>
+    <div class="row">
+      <div class="col-md-8"></div>
+      <div class="col-md-4">
+        <a href='https://www.glassdoor.com/index.htm'>powered by <img src='https://www.glassdoor.com/static/img/api/glassdoor_logo_80.png' title='Job Search' /></a>
+      </div>
     </div>
 
     <div class="row">
@@ -371,8 +373,9 @@
         <img src="" id="getCompanyImage3" class="companyImage">
         <button class="btn btn-info btn-sm">More Info</button>  
       </div> 
-    </div><!--end of employer section-->
+    </div>
   </div>
+<!--end of employer section-->
 
 <!--github Modal-->
   <div id='githubRepoModal' class="modal fade" tabindex="1" role="dialog">
