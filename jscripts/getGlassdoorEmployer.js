@@ -30,6 +30,14 @@ $(document).ready(function(){
           $("#getCompanyName" + employerSectionNumber.toString()).html(glassdoorData.response.employers[i].name);
           $("#getWebsite" + employerSectionNumber.toString()).html(glassdoorData.response.employers[i].website);
           $("#getIndustry" + employerSectionNumber.toString()).html(glassdoorData.response.employers[i].industryName);
+          $("#getCompanyPros" + employerSectionNumber.toString()).html(glassdoorData.response.employers[i].featuredReview.pros);  //added for more company info
+          $("#getCompanyCons" + employerSectionNumber.toString()).html(glassdoorData.response.employers[i].featuredReview.cons);
+          $("#overallRating" + employerSectionNumber.toString()).html(glassdoorData.response.employers[i].overallRating);
+          $("#cultureAndValuesRating" + employerSectionNumber.toString()).html(glassdoorData.response.employers[i].cultureAndValuesRating);
+          $("#careerOpportunitiesRating" + employerSectionNumber.toString()).html(glassdoorData.response.employers[i].careerOpportunitiesRating);
+          $("#workLifeBalanceRating" + employerSectionNumber.toString()).html(glassdoorData.response.employers[i].workLifeBalanceRating);
+          $("#getCompanyImageMoreInfo" + employerSectionNumber.toString()).attr("src", glassdoorData.response.employers[i].squareLogo);
+          $("#getCompanyNameMoreInfo" + employerSectionNumber.toString()).html(glassdoorData.response.employers[i].name);
         }
       },    
         error: function(jqXHR, textStatus, errorThrown) {
@@ -66,6 +74,14 @@ $(document).ready(function(){
           $("#getCompanyName" + employerSectionNumber.toString()).html(glassdoorData.response.employers[i].name);
           $("#getWebsite" + employerSectionNumber.toString()).html(glassdoorData.response.employers[i].website);
           $("#getIndustry" + employerSectionNumber.toString()).html(glassdoorData.response.employers[i].industryName);
+          $("#getCompanyPros" + employerSectionNumber.toString()).html(glassdoorData.response.employers[i].featuredReview.pros);  //added for more company info
+          $("#getCompanyCons" + employerSectionNumber.toString()).html(glassdoorData.response.employers[i].featuredReview.cons);
+          $("#overallRating" + employerSectionNumber.toString()).html(glassdoorData.response.employers[i].overallRating);
+          $("#cultureAndValuesRating" + employerSectionNumber.toString()).html(glassdoorData.response.employers[i].cultureAndValuesRating);
+          $("#careerOpportunitiesRating" + employerSectionNumber.toString()).html(glassdoorData.response.employers[i].careerOpportunitiesRating);
+          $("#workLifeBalanceRating" + employerSectionNumber.toString()).html(glassdoorData.response.employers[i].workLifeBalanceRating);
+          $("#getCompanyImageMoreInfo" + employerSectionNumber.toString()).attr("src", glassdoorData.response.employers[i].squareLogo);
+          $("#getCompanyNameMoreInfo" + employerSectionNumber.toString()).html(glassdoorData.response.employers[i].name);
         }
       },    
         error: function(jqXHR, textStatus, errorThrown) {
