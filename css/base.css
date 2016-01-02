@@ -68,10 +68,13 @@ ul {
   margin: 50px;
   margin-top: -10px;
 }
-
-#seedImage {
+/*trying to make the brand image round like the parallax image*/
+#seedImage { 
+  width: 50px;
   height: 50px;
-  width: 40px;
+  overflow: hidden;
+  border: 5px solid rgba(0, 0, 0, 0.05);
+  margin: 0 auto;
 }
 #footer {
     position:fixed;
