@@ -78,6 +78,13 @@ ul {
   border: 5px solid rgba(0, 0, 0, 0.05);
   margin: 0 auto;
 }
+#footerImage {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border: 5px solid rgba(0, 0, 0, 0.05);
+  margin: 0 auto;  
+}
 #footer {
     position:fixed;
     height:50px;
