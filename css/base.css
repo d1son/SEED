@@ -111,5 +111,7 @@ ul {
     margin: 30px auto;
   }
 }
-
+#studentMoreInfoSection {
+  border: 2px solid black;
+}
 }
