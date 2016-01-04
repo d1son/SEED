@@ -52,6 +52,8 @@ ul {
 
 #studentsSectionHeader {
   text-align: center;
+  margin: 50px auto;
+  font-size: 3em;
 }
 
 #moreStudentInfo {
@@ -101,4 +103,6 @@ ul {
     width: 1200px;
     margin: 30px auto;
   }
+}
+
 }
