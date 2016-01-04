@@ -70,10 +70,16 @@ $(document).ready(function(){
   });
   $('#contactNavBar').on('click', function(e){ //contact button on the main nav
     e.preventDefault()
-    $('#contactMain').show()
+    $('#studentPage').hide()
+    $('#studentList').hide()
+    $('.filter').hide()
+    $('#mainNavbar').hide()
+    $("#employerSection").hide()
     $('#header').hide()
     $('#brandStatement').hide()
     $('#itemDescription').hide() 
+    $('#footerMain').hide()
+    $('#contactMain').show() 
 
   });
   $('#addStudent').on('click', function(){

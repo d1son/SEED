@@ -9,7 +9,7 @@ $(document).ready(function(){
     var businessLocation = $("#searchCompanyLocation").val().trim();
     var jobTitle = $("#searchJob").val().trim();
 
-    var urlSearchCompany = "http://api.glassdoor.com/api/api.htm?t.p=51262&t.k=etldXOKl8dW&userip=0.0.0.0&useragent=&format=json&v=1&action=employers";
+    var urlSearchCompany = "https://api.glassdoor.com/api/api.htm?t.p=51262&t.k=etldXOKl8dW&userip=0.0.0.0&useragent=&format=json&v=1&action=employers";
     urlSearchCompany = urlSearchCompany + "&q=";
     urlSearchCompany = urlSearchCompany + business;
     urlSearchCompany = urlSearchCompany + "&l=";
@@ -19,7 +19,7 @@ $(document).ready(function(){
     $.ajax({
       type: "GET",
       url: urlSearchCompany,
-      //url: "http://api.glassdoor.com/api/api.htm?t.p=51262&t.k=etldXOKl8dW&userip=0.0.0.0&useragent=&format=json&v=1&action=employers",
+      //url: "https://api.glassdoor.com/api/api.htm?t.p=51262&t.k=etldXOKl8dW&userip=0.0.0.0&useragent=&format=json&v=1&action=employers",
       dataType: "jsonp",
 
       success: function(glassdoorData){
@@ -52,7 +52,7 @@ $(document).ready(function(){
 
     var jobLocation = $("#searchJobLocation").val().trim();
     var jobTitle = $("#searchJob").val().trim();
-    var urlSearchJob = "http://api.glassdoor.com/api/api.htm?t.p=51262&t.k=etldXOKl8dW&userip=0.0.0.0&useragent=&format=json&v=1&action=employers";
+    var urlSearchJob = "https://api.glassdoor.com/api/api.htm?t.p=51262&t.k=etldXOKl8dW&userip=0.0.0.0&useragent=&format=json&v=1&action=employers";
     
     urlSearchJob = urlSearchJob + "&jt=";
     urlSearchJob = urlSearchJob + jobTitle;
