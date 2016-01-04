@@ -17,7 +17,7 @@ S.E.E.D (Student Employee Employer Database) is a website designed to connect st
 
 ##Deployed Link
 
-- https://gentle-ocean-5040.herokuapp.com/ In progress...
+- https://dry-badlands-5433.herokuapp.com/
 
 ##API's Used
 
