@@ -12,13 +12,18 @@ $(document).ready(function(){
   $('.filter').hide()
   $('.studentSectionNavBar').hide()
 
+
 //EventListeners
   $('#student-employee').on('click', function(e){
     e.preventDefault()
     $('#studentPage').show()
     $('#studentList').show()
     $('.filter').show()
-    $('#mainNavbar').hide()                         //added to hide the main navbar
+    $('#mainNavbar').hide()
+    $('#header').hide()
+    $('#brandStatement').hide()
+    $('#itemDescription').hide() 
+    $('#footerMain').hide()   //When clicking Student/Employee from Home page, navbar,header, brandstatement all hidden. 
     fillStudentList()
   });
   $('#student-employee-1').on('click', function(e){   //student link on employer navbar
@@ -28,6 +33,10 @@ $(document).ready(function(){
     $('.filter').show()
     $('#mainNavbar').hide()
     $("#employerSection").hide()
+    $('#header').hide()
+    $('#brandStatement').hide()
+    $('#itemDescription').hide() 
+    $('#footerMain').hide()    
     //fillStudentList()
   });
   $('#employerNavBar-1').on('click', function(e){   //employer link on student navbar
@@ -37,6 +46,10 @@ $(document).ready(function(){
     $('.filter').hide()
     $('#mainNavbar').hide()
     $("#employerSection").show()
+    $('#header').hide()
+    $('#brandStatement').hide()
+    $('#itemDescription').hide() 
+    $('#footerMain').hide()    
   });
   $('#employerNavBar').on('click', function(e){   //employer link on main navbar
     e.preventDefault()
@@ -45,6 +58,10 @@ $(document).ready(function(){
     $('.filter').hide()
     $('#mainNavbar').hide()
     $("#employerSection").show()
+    $('#header').hide()
+    $('#brandStatement').hide()
+    $('#itemDescription').hide() 
+    $('#footerMain').hide()    
   });
   $('#contactNavBar').on('click', function(){
 
