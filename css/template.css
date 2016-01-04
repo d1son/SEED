@@ -55,3 +55,12 @@
   border: 9px solid rgba(0, 0, 0, 0.05);
   margin: 0 auto; 
 }
+.contactUs {
+  margin-bottom: 15px;
+}
+h1 {
+  margin-bottom: 20px;
+}
+#contactInfo {
+  text-align: center;
+}
