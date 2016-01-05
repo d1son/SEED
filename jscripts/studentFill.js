@@ -73,7 +73,7 @@ $(document).ready(function(){
     $('#studentPage').hide()
     $('#studentList').hide()
     $('.filter').hide()
-    $('#mainNavbar').hide()
+    $('#mainNavbar').show()
     $("#employerSection").hide()
     $('#header').hide()
     $('#brandStatement').hide()
