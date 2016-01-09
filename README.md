@@ -24,6 +24,7 @@ S.E.E.D (Student Employee Employer Database) is a website designed to connect st
 - Linkedin API - https://developer.linkedin.com/docs
 - Github API - https://developer.github.com/v3/#authentication
 - Firebase API - https://www.firebase.com/docs/web/api/
+- Glassdoor API - https://www.glassdoor.com/developer/index.htm
 
 ##Trello Link
 https://trello.com/studentemployersearch
